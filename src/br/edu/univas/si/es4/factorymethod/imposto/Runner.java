@@ -27,8 +27,10 @@ public class Runner {
 		for(Funcionario funcionario: funcionarios) {
 			String nome = funcionario.getNome();
 			double salarioBruto = funcionario.salarioBruto();
+			double salarioLiquido = funcionario.salarioLiquido();
 			String message = "Nome: " + nome
-					+ " - Salario bruto: " + salarioBruto;
+					+ " - Salario bruto: " + salarioBruto
+					+ " - Salario liquido: " + salarioLiquido;
 			System.out.println(message);
 		}
 	}

@@ -21,6 +21,10 @@ public class Horista extends Funcionario {
 	public void setQuantidadeHoras(int quantidadeHoras) {
 		this.quantidadeHoras = quantidadeHoras;
 	}
+	@Override
+	protected CalculadoraImposto getCalculadoraImposto() {
+		return new ImpostoHorista(valorHora, quantidadeHoras);
+	}
 	
 	
 

@@ -21,5 +21,9 @@ public class Mensalista extends Funcionario {
 	public void setSalarioMensal(double salarioMensal) {
 		this.salarioMensal = salarioMensal;
 	}
+	@Override
+	protected CalculadoraImposto getCalculadoraImposto() {
+		return new ImpostoMensalista(salarioMensal, horasExtras);
+	}
 
 }
